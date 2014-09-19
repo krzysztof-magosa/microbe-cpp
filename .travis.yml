@@ -1,12 +1,11 @@
 language: cpp
 
 before_script:
-  - sudo apt-get install cpputest
+  - brew install cpputest
   - cmake .
   - make
 
 script: make test
 
 os:
-  - linux
   - osx
