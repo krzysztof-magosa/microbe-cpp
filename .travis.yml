@@ -1,0 +1,11 @@
+language: cpp
+
+before_script:
+  - cmake .
+  - make
+
+script: make test
+
+os:
+  - linux
+  - osx
