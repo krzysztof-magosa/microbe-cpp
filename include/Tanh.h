@@ -20,6 +20,7 @@
 
 namespace microbe {
     class Tanh : public Function {
+    public:
         double function(const double);
         double derivative(const double);
         double getUpperLimit();
