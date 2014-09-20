@@ -5,6 +5,7 @@ add_library (
     Tanh.cpp
     Neuron.cpp
     BiasNeuron.cpp
+    InputNeuron.cpp
     Connection.cpp
     LearningData.cpp
 )
