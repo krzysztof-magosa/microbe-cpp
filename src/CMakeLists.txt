@@ -9,4 +9,5 @@ add_library (
     Connection.cpp
     LearningData.cpp
     LearningSet.cpp
+    Layer.cpp
 )
