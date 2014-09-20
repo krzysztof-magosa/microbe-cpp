@@ -1,5 +1,2 @@
-*.cpp.o
-CMakeCache.txt
-CMakeFiles/
-*.cmake
+build/
 
