@@ -11,3 +11,7 @@ script: make test
 os:
   - osx
   - linux
+
+compiler:
+  - clang
+  - gcc
