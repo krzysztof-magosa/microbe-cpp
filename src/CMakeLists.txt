@@ -3,4 +3,8 @@ add_library (
     Function.cpp
     Sigmoid.cpp
     Tanh.cpp
+    Neuron.cpp
+    BiasNeuron.cpp
+    Connection.cpp
+    LearningData.cpp
 )
