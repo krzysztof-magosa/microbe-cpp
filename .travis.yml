@@ -1,7 +1,6 @@
 language: cpp
 
 before_script:
-  - brew install cpputest
   - cmake .
   - make
 
@@ -9,3 +8,4 @@ script: make test
 
 os:
   - osx
+  - linux
