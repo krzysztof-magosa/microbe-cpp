@@ -10,4 +10,5 @@ add_library (
     LearningData.cpp
     LearningSet.cpp
     Layer.cpp
+    InputLayer.cpp
 )
