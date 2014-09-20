@@ -21,8 +21,8 @@
 namespace microbe {
     class Sigmoid : public Function {
     public:
-        double function(const double);
-        double derivative(const double);
+        double function(const double input);
+        double derivative(const double functionOutput);
         double getUpperLimit();
         double getLowerLimit();
         

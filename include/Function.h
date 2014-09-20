@@ -19,9 +19,9 @@
 namespace microbe {
     class Function {
     public:
-        virtual double function(const double) = 0;
+        virtual double function(const double input) = 0;
         // Due to performance reasons derivative() takes function() result
-        virtual double derivative(const double) = 0;
+        virtual double derivative(const double functionOutput) = 0;
         virtual double getUpperLimit() = 0;
         virtual double getLowerLimit() = 0;
     };
