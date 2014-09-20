@@ -15,3 +15,7 @@ add_test(NAME neuron COMMAND neuron)
 add_executable(biasNeuron BiasNeuron.cpp)
 target_link_libraries (biasNeuron microbe ${GTEST_LIBRARY} ${GTEST_LIBRARY_MAIN} ${CMAKE_THREAD_LIBS_INIT})
 add_test(NAME biasNeuron COMMAND biasNeuron)
+
+add_executable(inputNeuron InputNeuron.cpp)
+target_link_libraries (inputNeuron microbe ${GTEST_LIBRARY} ${GTEST_LIBRARY_MAIN} ${CMAKE_THREAD_LIBS_INIT})
+add_test(NAME inputNeuron COMMAND inputNeuron)
