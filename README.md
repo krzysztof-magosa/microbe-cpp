@@ -1,4 +1,4 @@
-Microbe Articial Intelligence Library
+Microbe Artificial Intelligence Library
 =====================================
 
 The plan is to build simple in use and reliable AI library in pure C++11.  
