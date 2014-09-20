@@ -8,4 +8,5 @@ add_library (
     InputNeuron.cpp
     Connection.cpp
     LearningData.cpp
+    LearningSet.cpp
 )
