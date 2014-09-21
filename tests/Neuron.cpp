@@ -16,6 +16,7 @@
 #include "gtest/gtest.h"
 #include "Neuron.h"
 #include "Sigmoid.h"
+#include "Connection.h"
 
 TEST(NeuronTest, Type)
 {
@@ -33,6 +34,16 @@ TEST(NeuronTest, Function)
 
 	ASSERT_EQ(sigmoid1, &neuron.getFunction());
 	ASSERT_NE(sigmoid2, &neuron.getFunction());
+}
+
+TEST(NeuronTest, Connections)
+{
+	microbe::Neuron neuron1;
+	microbe::Neuron neuron2;
+	microbe::Connection::interconnect(neuron1, neuron2);
+
+	ASSERT_EQ(&neuron2, &neuron1.getOutputConnections().front()->getDestination());
+	ASSERT_EQ(&neuron1, &neuron2.getInputConnections().front()->getSource());
 }
 
 // @TODO: TBC
