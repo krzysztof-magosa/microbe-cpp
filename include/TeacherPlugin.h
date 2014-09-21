@@ -21,7 +21,7 @@
 namespace microbe {
     class TeacherPlugin {
     public:
-        virtual ~TeacherPlugin();
+        virtual ~TeacherPlugin() {};
         virtual void init(Teacher* teacher) = 0;
         virtual void preEpoch(void) = 0;
         virtual void postEpoch(void) = 0;
