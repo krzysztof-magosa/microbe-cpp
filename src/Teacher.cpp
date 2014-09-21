@@ -37,6 +37,11 @@ namespace microbe {
         learningSets.push_back(&set);
     }
 
+    std::vector<LearningSet*> Teacher::getLearningSets(void)
+    {
+        return learningSets;
+    }
+
     double Teacher::getLastEpochError(void)
     {
         return lastEpochError;
