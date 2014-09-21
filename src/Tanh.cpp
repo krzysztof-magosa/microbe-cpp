@@ -36,4 +36,9 @@ namespace microbe {
     {
         return -1.0;
     }
+
+    bool Tanh::hasFlatSpot()
+    {
+        return false;
+    }
 }

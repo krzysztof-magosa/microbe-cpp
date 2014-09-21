@@ -37,6 +37,11 @@ namespace microbe {
         return 0.0;
     }
     
+    bool Sigmoid::hasFlatSpot()
+    {
+        return true;
+    }
+
     double Sigmoid::getSlope()
     {
         return -1.0;

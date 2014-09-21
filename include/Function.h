@@ -24,6 +24,7 @@ namespace microbe {
         virtual double derivative(const double functionOutput) = 0;
         virtual double getUpperLimit() = 0;
         virtual double getLowerLimit() = 0;
+        virtual bool hasFlatSpot() = 0;
     };
 }
 
