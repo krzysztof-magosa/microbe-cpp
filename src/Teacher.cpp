@@ -61,10 +61,14 @@ namespace microbe {
 
     bool Teacher::train(void)
     {
-        // @TODO: To be implemented.
-        firePreEpoch();
-        trainEpoch();
-        firePostEpoch();
+        calculateSquaredErrorEpoch();
+
+        while (lastEpochError > goal) {
+            firePreEpoch();
+            trainEpoch();
+            calculateSquaredErrorEpoch();
+            firePostEpoch();
+        }
 
         return true;
     }
