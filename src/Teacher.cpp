@@ -17,6 +17,11 @@
 #include "TeacherPlugin.h"
 
 namespace microbe {
+    void Teacher::setGoal(const double value)
+    {
+        goal = value;
+    }
+
     void Teacher::setLearningRate(const double value)
     {
         learningRate = value;
