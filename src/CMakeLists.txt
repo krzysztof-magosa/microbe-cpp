@@ -12,4 +12,5 @@ add_library (
     Layer.cpp
     InputLayer.cpp
     Network.cpp
+    MultiLayerPerceptron.cpp
 )
