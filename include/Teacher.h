@@ -16,28 +16,30 @@
 #ifndef __Microbe__Teacher__
 #define __Microbe__Teacher__
 
-#include <iostream>
+#include <cmath>
 #include "LearningSet.h"
+#include "Network.h"
 
 namespace microbe {
-    template <class T>
     class Teacher {
     public:
+        void setGoal(const double value);
         void setLearningRate(const double value);
         void setMomentum(const double value);
-        void addLearningSet(const LearningSet &set);
+        void addLearningSet(LearningSet& set);
         double calculateSquaredErrorEpoch(void);
         bool train(void);
-
+        
     protected:
         virtual void trainEpoch(void) = 0;
-        double squaredError(const LearningSet &set);
+        double squaredError(LearningSet& set);
         
+        double goal = 0.01;
         double learningRate = 0.75;
         double momentum = 0.95;
         double lastEpochError;
-        std::vector<LearningSet*> learningData;
-        T *network;
+        std::vector<LearningSet*> learningSets;
+        Network* network;
     };
 }
 
