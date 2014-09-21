@@ -15,4 +15,5 @@ add_library (
     MultiLayerPerceptron.cpp
     Teacher.cpp
     TeacherPlugin.cpp
+    BackPropagation.cpp
 )
