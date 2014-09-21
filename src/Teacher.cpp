@@ -22,6 +22,11 @@ namespace microbe {
         learningRate = value;
     }
 
+    double Teacher::getLearningRate(void)
+    {
+        return learningRate;
+    }
+
     void Teacher::setMomentum(const double value)
     {
         momentum = value;

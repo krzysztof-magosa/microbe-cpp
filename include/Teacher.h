@@ -27,6 +27,7 @@ namespace microbe {
     public:
         void setGoal(const double value);
         void setLearningRate(const double value);
+        double getLearningRate(void);
         void setMomentum(const double value);
         void addLearningSet(LearningSet& set);
         double getLastEpochError(void);
