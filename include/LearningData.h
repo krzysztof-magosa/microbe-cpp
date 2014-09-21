@@ -20,7 +20,8 @@
 
 namespace microbe {
     class LearningData {
-        
+    public:
+        virtual ~LearningData() {}
     };
 }
 
