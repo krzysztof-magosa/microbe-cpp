@@ -14,4 +14,5 @@ add_library (
     Network.cpp
     MultiLayerPerceptron.cpp
     Teacher.cpp
+    TeacherPlugin.cpp
 )
