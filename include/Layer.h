@@ -29,7 +29,6 @@ namespace microbe {
         Layer(void);
         std::vector<Neuron*> getNeurons();
         void run(void);
-        void initBias(void);
         bool hasBias(void);
         
     protected:

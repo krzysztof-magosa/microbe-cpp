@@ -47,12 +47,7 @@ namespace microbe {
             neuron.activate();
         }
     }
-    
-    void Layer::initBias(void)
-    {
-        neurons.push_back(new BiasNeuron());
-    }
-                          
+
     bool Layer::hasBias()
     {
         std::vector<Neuron*>::iterator it;
