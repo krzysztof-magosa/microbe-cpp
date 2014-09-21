@@ -14,6 +14,7 @@
  */
 
 #include "Teacher.h"
+#include "TeacherPlugin.h"
 
 namespace microbe {
     void Teacher::setLearningRate(const double value)
@@ -46,7 +47,10 @@ namespace microbe {
     bool Teacher::train(void)
     {
         // @TODO: To be implemented.
+        firePreEpoch();
         trainEpoch();
+        firePostEpoch();
+
         return true;
     }
 
@@ -66,4 +70,24 @@ namespace microbe {
 
         return error;
     }
+
+    void Teacher::registerPlugin(TeacherPlugin& plugin)
+    {
+        plugin.init(this);
+        plugins.push_back(&plugin);
+    }
+
+    void Teacher::firePreEpoch(void)
+    {
+        for (TeacherPlugin *plugin : plugins) {
+            plugin->preEpoch();
+        }
+    }
+
+    void Teacher::firePostEpoch(void)
+    {
+        for (TeacherPlugin *plugin : plugins) {
+            plugin->postEpoch();
+        }
+    }    
 }
