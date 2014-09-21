@@ -11,4 +11,5 @@ add_library (
     LearningSet.cpp
     Layer.cpp
     InputLayer.cpp
+    Network.cpp
 )
