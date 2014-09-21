@@ -16,4 +16,5 @@ add_library (
     Teacher.cpp
     TeacherPlugin.cpp
     BackPropagation.cpp
+    SmartLearningRate.cpp
 )
