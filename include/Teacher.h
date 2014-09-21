@@ -29,6 +29,7 @@ namespace microbe {
         void setLearningRate(const double value);
         void setMomentum(const double value);
         void addLearningSet(LearningSet& set);
+        double getLastEpochError(void);
         double calculateSquaredErrorEpoch(void);
         bool train(void);
         void registerPlugin(TeacherPlugin& plugin);

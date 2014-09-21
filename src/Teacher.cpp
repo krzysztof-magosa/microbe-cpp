@@ -32,6 +32,11 @@ namespace microbe {
         learningSets.push_back(&set);
     }
 
+    double Teacher::getLastEpochError(void)
+    {
+        return lastEpochError;
+    }
+
     double Teacher::calculateSquaredErrorEpoch(void)
     {
         double error = 0;
