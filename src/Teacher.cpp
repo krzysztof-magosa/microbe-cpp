@@ -92,7 +92,8 @@ namespace microbe {
 
     void Teacher::registerPlugin(TeacherPlugin& plugin)
     {
-        plugin.init(this);
+        plugin.setTeacher(this);
+        plugin.init();
         plugins.push_back(&plugin);
     }
 

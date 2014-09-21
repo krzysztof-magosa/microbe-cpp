@@ -14,3 +14,10 @@
  */
 
 #include "TeacherPlugin.h"
+
+namespace microbe {
+    void TeacherPlugin::setTeacher(Teacher* teacher)
+    {
+        this->teacher = teacher;
+    }
+}
