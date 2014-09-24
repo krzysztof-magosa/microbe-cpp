@@ -22,6 +22,7 @@ namespace microbe {
     class SmartLearningRate : public TeacherPlugin {
     public:
     	void init();
+    	void adjustRate(const double ratio);
     	void preEpoch(void);
     	void postEpoch(void);
 

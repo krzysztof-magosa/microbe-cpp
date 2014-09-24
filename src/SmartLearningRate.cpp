@@ -26,16 +26,28 @@ namespace microbe {
         lastError = teacher->getLastEpochError();
     }
 
+    void SmartLearningRate::adjustRate(const double ratio)
+    {
+        double rate = teacher->getLearningRate() * ratio;
+
+        if (rate > 1.0) {
+            rate = 1.0;
+        }
+        else if (rate <= 0.0) {
+            rate = 0.000001;
+        }
+
+        teacher->setLearningRate(rate);
+    }
+
     void SmartLearningRate::postEpoch(void)
     {
         if (ready) {
-            double learningRate = teacher->getLearningRate();
-
             if ((teacher->getLastEpochError() / lastError) > 1.04) {
-                teacher->setLearningRate(learningRate * 0.70);
+                this->adjustRate(0.7);
             }
             else if ((teacher->getLastEpochError() - lastError) < 0.0) {
-                teacher->setLearningRate(learningRate * 1.02);
+                this->adjustRate(1.02);
             }
         }
         else {
