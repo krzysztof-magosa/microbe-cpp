@@ -38,10 +38,10 @@ namespace microbe {
         double getSum(void);
         std::vector<Connection*> getInputConnections(void);
         std::vector<Connection*> getOutputConnections(void);
-        virtual void addInputConnection(Connection &connection);
-        void addOutputConnection(Connection &connection);
-        void setLearningData(LearningData &data);
-        LearningData &getLearningData(void);
+        virtual void addInputConnection(Connection& connection);
+        void addOutputConnection(Connection& connection);
+        void setLearningData(LearningData& data);
+        LearningData& getLearningData(void);
 
         virtual double activate(void);
         virtual NeuronType getType(void);
