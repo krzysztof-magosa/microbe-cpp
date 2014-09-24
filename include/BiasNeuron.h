@@ -23,7 +23,7 @@ namespace microbe {
     class BiasNeuron : public Neuron {
     public:
         double activate(void);
-        void addInputConnection(Connection&);
+        void addInputConnection(Connection& connection);
         NeuronType getType(void);
     };
 }
