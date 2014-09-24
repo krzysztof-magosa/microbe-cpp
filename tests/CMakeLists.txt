@@ -23,3 +23,7 @@ add_test(NAME inputNeuron COMMAND inputNeuron)
 add_executable(connection Connection.cpp)
 target_link_libraries (connection microbe ${GTEST_LIBRARY} ${GTEST_LIBRARY_MAIN} ${CMAKE_THREAD_LIBS_INIT})
 add_test(NAME connection COMMAND connection)
+
+add_executable(normalizer Normalizer.cpp)
+target_link_libraries (normalizer microbe ${GTEST_LIBRARY} ${GTEST_LIBRARY_MAIN} ${CMAKE_THREAD_LIBS_INIT})
+add_test(NAME normalizer COMMAND normalizer)
