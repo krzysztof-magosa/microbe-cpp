@@ -29,8 +29,8 @@ namespace microbe {
         std::map<std::string, Neuron*> getNeuronsMap(void);
         std::vector<InputNeuron*> getInputNeurons(void);
         
-        void addLayer(Layer&);
-        std::vector<Layer*> &getLayers(void);
+        void addLayer(Layer& layer);
+        std::vector<Layer*>& getLayers(void);
         
     protected:
         void interconnectLayers(Layer& first, Layer& second);
