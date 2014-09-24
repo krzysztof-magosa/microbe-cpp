@@ -19,11 +19,23 @@
 namespace microbe {
     void Teacher::setGoal(const double value)
     {
+        if (value <= 0.0) {
+            throw std::invalid_argument("Goal must be positive number.");
+        }
+
         goal = value;
     }
 
     void Teacher::setLearningRate(const double value)
     {
+        if (value <= 0.0) {
+            throw std::invalid_argument("Learning rate cannot be 0.0 or negative number.");
+        }
+
+        if (value > 1.0) {
+            throw std::invalid_argument("Learning rate cannot be higher than 1.0.");
+        }
+
         learningRate = value;
     }
 
@@ -34,6 +46,14 @@ namespace microbe {
 
     void Teacher::setMomentum(const double value)
     {
+        if (value < 0.0) {
+            throw std::invalid_argument("Momentum cannot be negative.");
+        }
+
+        if (value > 1.0) {
+            throw std::invalid_argument("Momentum cannot be higher than 1.0.");
+        }
+
         momentum = value;
     }
         
