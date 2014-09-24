@@ -25,10 +25,10 @@ namespace microbe {
     
     class Connection {
     public:
-        Connection(Neuron &source, Neuron&destination);
+        Connection(Neuron& source, Neuron& destination);
         Neuron &getSource(void);
         Neuron &getDestination(void);
-        void setLearningData(LearningData &data);
+        void setLearningData(LearningData& data);
         LearningData &getLearningData(void);
         double getInput(void);
         double getWeightedInput(void);
@@ -37,13 +37,13 @@ namespace microbe {
         void incWeight(double value);
         void decWeight(double value);
         
-        static Connection &interconnect(Neuron &source, Neuron &destination);
+        static Connection& interconnect(Neuron& source, Neuron& destination);
         
     protected:
-        Neuron *source;
-        Neuron *destination;
+        Neuron* source;
+        Neuron* destination;
         double weight;
-        LearningData *learningData;
+        LearningData* learningData;
         
     private:
         Connection();

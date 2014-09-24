@@ -16,7 +16,7 @@
 #include "Connection.h"
 
 namespace microbe {
-    Connection::Connection(Neuron &source, Neuron &destination)
+    Connection::Connection(Neuron& source, Neuron& destination)
     {
         this->source = &source;
         this->destination = &destination;
@@ -42,7 +42,7 @@ namespace microbe {
         return *learningData;
     }
     
-    void Connection::setLearningData(LearningData &data)
+    void Connection::setLearningData(LearningData& data)
     {
         learningData = &data;
     }
@@ -77,7 +77,7 @@ namespace microbe {
         this->weight -= value;
     }
     
-    Connection &Connection::interconnect(Neuron &source, Neuron &destination)
+    Connection &Connection::interconnect(Neuron& source, Neuron& destination)
     {
         Connection *connection = new Connection(source, destination);
         source.addOutputConnection(*connection);
