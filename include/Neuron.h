@@ -32,7 +32,7 @@ namespace microbe {
             Input
         };
         
-        void setFunction(Function *function);
+        void setFunction(Function& function);
         Function &getFunction(void);
         double getOutput(void);
         double getSum(void);

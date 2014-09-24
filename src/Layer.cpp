@@ -20,7 +20,7 @@ namespace microbe {
     {
     }
     
-    Layer::Layer(const int neuronsCount, Function *function, const bool withBias)
+    Layer::Layer(const int neuronsCount, Function& function, const bool withBias)
     {
         for (int i = 1; i <= neuronsCount; ++i) {
             Neuron *neuron = new Neuron();

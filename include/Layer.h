@@ -24,8 +24,8 @@
 namespace microbe {
     class Layer {
     public:
-        Layer(const int, Function*, const bool);
-        Layer(const int neuronsCount, Function* function) : Layer(neuronsCount, function, true) {};
+        Layer(const int, Function&, const bool);
+        Layer(const int neuronsCount, Function& function) : Layer(neuronsCount, function, true) {};
         Layer(void);
         std::vector<Neuron*> getNeurons();
         void run(void);

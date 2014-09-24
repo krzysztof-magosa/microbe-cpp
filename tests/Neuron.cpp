@@ -26,14 +26,14 @@ TEST(NeuronTest, Type)
 
 TEST(NeuronTest, Function)
 {
-	microbe::Function *sigmoid1 = new microbe::Sigmoid();
-	microbe::Function *sigmoid2 = new microbe::Sigmoid();
+	microbe::Sigmoid sigmoid1;
+	microbe::Sigmoid sigmoid2;
 
 	microbe::Neuron neuron;
 	neuron.setFunction(sigmoid1);
 
-	ASSERT_EQ(sigmoid1, &neuron.getFunction());
-	ASSERT_NE(sigmoid2, &neuron.getFunction());
+	ASSERT_EQ(&sigmoid1, &neuron.getFunction());
+	ASSERT_NE(&sigmoid2, &neuron.getFunction());
 }
 
 TEST(NeuronTest, Connections)

@@ -27,11 +27,14 @@
 
 int main(int argc, char** args)
 {
+    // Function
+    microbe::Sigmoid sigmoid;
+
     // Network definition (2, 2, 1)
     microbe::MultiLayerPerceptron network;
     microbe::InputLayer inputLayer(2);
-    microbe::Layer hiddenLayer(2, new microbe::Sigmoid(), true);
-    microbe::Layer outputLayer(1, new microbe::Sigmoid(), false);
+    microbe::Layer hiddenLayer(2, sigmoid, true);
+    microbe::Layer outputLayer(1, sigmoid, false);
     network.addLayer(inputLayer);
     network.addLayer(hiddenLayer);
     network.addLayer(outputLayer);

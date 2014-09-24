@@ -16,9 +16,9 @@
 #include "Neuron.h"
 
 namespace microbe {
-    void Neuron::setFunction(Function *function)
+    void Neuron::setFunction(Function& function)
     {
-        this->function = function;
+        this->function = &function;
     }
     
     Function &Neuron::getFunction(void)
