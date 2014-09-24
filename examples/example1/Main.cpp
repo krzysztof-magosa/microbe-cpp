@@ -1,5 +1,3 @@
-//
-//  Main.cpp
 /**
  * Copyright 2014 Krzysztof Magosa
  *
