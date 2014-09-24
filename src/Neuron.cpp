@@ -46,17 +46,17 @@ namespace microbe {
         return outputConnections;
     }
     
-    void Neuron::addInputConnection(Connection &connection)
+    void Neuron::addInputConnection(Connection& connection)
     {
         inputConnections.push_back(&connection);
     }
     
-    void Neuron::addOutputConnection(Connection &connection)
+    void Neuron::addOutputConnection(Connection& connection)
     {
         outputConnections.push_back(&connection);
     }
     
-    void Neuron::setLearningData(LearningData &data)
+    void Neuron::setLearningData(LearningData& data)
     {
         learningData = &data;
     }
