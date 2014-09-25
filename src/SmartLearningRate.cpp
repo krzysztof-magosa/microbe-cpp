@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-#include "SmartLearningRate.h"
+#include "SmartLearningRate.hpp"
 
 namespace microbe {
     void SmartLearningRate::init()

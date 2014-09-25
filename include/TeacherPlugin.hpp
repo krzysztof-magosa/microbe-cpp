@@ -13,23 +13,23 @@
  * limitations under the License.
  */
 
-#ifndef __Microbe__Sigmoid__
-#define __Microbe__Sigmoid__
+#ifndef __Microbe__TeacherPlugin__
+#define __Microbe__TeacherPlugin__
 
-#include "Function.h"
+#include "Teacher.hpp"
 
 namespace microbe {
-    class Sigmoid : public Function {
+    class TeacherPlugin {
     public:
-        double function(const double input);
-        double derivative(const double functionOutput);
-        double getUpperLimit();
-        double getLowerLimit();
-        bool hasFlatSpot();
-        
-    private:
-        double getSlope();
+        virtual ~TeacherPlugin() {};
+        void setTeacher(Teacher* teacher);
+        virtual void init(void) = 0;
+        virtual void preEpoch(void) = 0;
+        virtual void postEpoch(void) = 0;
+
+    protected:
+        Teacher* teacher;
     };
 }
 
-#endif /* defined(__Microbe__Sigmoid__) */
+#endif /* defined(__Microbe__TeacherPlugin__) */

@@ -13,20 +13,17 @@
  * limitations under the License.
  */
 
-#ifndef __Microbe__Tanh__
-#define __Microbe__Tanh__
+#ifndef __Microbe__InputLayer__
+#define __Microbe__InputLayer__
 
-#include "Function.h"
+#include <iostream>
+#include "Layer.hpp"
 
 namespace microbe {
-    class Tanh : public Function {
+    class InputLayer : public Layer {
     public:
-        double function(const double input);
-        double derivative(const double functionOutput);
-        double getUpperLimit();
-        double getLowerLimit();
-        bool hasFlatSpot();
+        InputLayer(const int neuronsCount);
     };
 }
 
-#endif /* defined(__Microbe__Tanh__) */
+#endif /* defined(__Microbe__InputLayer__) */

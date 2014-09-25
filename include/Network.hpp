@@ -13,23 +13,23 @@
  * limitations under the License.
  */
 
-#ifndef __Microbe__TeacherPlugin__
-#define __Microbe__TeacherPlugin__
+#ifndef __Microbe__Network__
+#define __Microbe__Network__
 
-#include "Teacher.h"
+#include <vector>
+#include <map>
+#include "Neuron.hpp"
+#include "InputNeuron.hpp"
 
 namespace microbe {
-    class TeacherPlugin {
+    class Network {
     public:
-        virtual ~TeacherPlugin() {};
-        void setTeacher(Teacher* teacher);
-        virtual void init(void) = 0;
-        virtual void preEpoch(void) = 0;
-        virtual void postEpoch(void) = 0;
-
-    protected:
-        Teacher* teacher;
+        virtual void run(void) = 0;
+        virtual void setValues(std::vector<double> values) = 0;
+        virtual std::vector<double> getOutput(void) = 0;
+        virtual std::map<std::string, Neuron*> getNeuronsMap(void) = 0;
+        virtual std::vector<InputNeuron*> getInputNeurons(void) = 0;
     };
 }
 
-#endif /* defined(__Microbe__TeacherPlugin__) */
+#endif /* defined(__Microbe__Network__) */

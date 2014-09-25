@@ -14,7 +14,7 @@
  */
 
 #include "gtest/gtest.h"
-#include "Connection.h"
+#include "Connection.hpp"
 
 TEST(ConnectionTest, Connections)
 {

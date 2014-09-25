@@ -13,22 +13,20 @@
  * limitations under the License.
  */
 
-#ifndef __Microbe__InputNeuron__
-#define __Microbe__InputNeuron__
+#ifndef __Microbe__Tanh__
+#define __Microbe__Tanh__
 
-#include <iostream>
-#include "Neuron.h"
+#include "Function.hpp"
 
 namespace microbe {
-    class InputNeuron : public Neuron {
+    class Tanh : public Function {
     public:
-        void setInput(double input);
-        double activate(void);
-        NeuronType getType(void);
-        
-    private:
-        double input;
+        double function(const double input);
+        double derivative(const double functionOutput);
+        double getUpperLimit();
+        double getLowerLimit();
+        bool hasFlatSpot();
     };
 }
 
-#endif /* defined(__Microbe__InputNeuron__) */
+#endif /* defined(__Microbe__Tanh__) */

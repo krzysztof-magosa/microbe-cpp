@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-#include "Normalizer.h"
+#include "Normalizer.hpp"
 
 namespace microbe {
     Normalizer::Normalizer(const double minInput, const double maxInput, const double minOutput, const double maxOutput)

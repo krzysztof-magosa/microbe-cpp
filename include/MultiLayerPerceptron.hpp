@@ -13,27 +13,29 @@
  * limitations under the License.
  */
 
-#ifndef __Microbe__Layer__
-#define __Microbe__Layer__
+#ifndef __Microbe__MultiLayerPerceptron__
+#define __Microbe__MultiLayerPerceptron__
 
-#include <iostream>
-#include <vector>
-#include "Neuron.h"
-#include "BiasNeuron.h"
+#include "Network.hpp"
+#include "Layer.hpp"
+#include "InputNeuron.hpp"
 
 namespace microbe {
-    class Layer {
+    class MultiLayerPerceptron : public Network {
     public:
-        Layer(const int neuronsCount, Function& function, const bool withBias);
-        Layer(const int neuronsCount, Function& function) : Layer(neuronsCount, function, true) {};
-        Layer(void);
-        std::vector<Neuron*> getNeurons();
         void run(void);
-        bool hasBias(void);
+        void setValues(std::vector<double> values);
+        std::vector<double> getOutput(void);
+        std::map<std::string, Neuron*> getNeuronsMap(void);
+        std::vector<InputNeuron*> getInputNeurons(void);
+        
+        void addLayer(Layer& layer);
+        std::vector<Layer*>& getLayers(void);
         
     protected:
-        std::vector<Neuron*> neurons;
+        void interconnectLayers(Layer& first, Layer& second);
+        std::vector<Layer*> layers;
     };
 }
 
-#endif /* defined(__Microbe__Layer__) */
+#endif /* defined(__Microbe__MultiLayerPerceptron__) */

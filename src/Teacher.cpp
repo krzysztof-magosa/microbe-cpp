@@ -13,8 +13,8 @@
  * limitations under the License.
  */
 
-#include "Teacher.h"
-#include "TeacherPlugin.h"
+#include "Teacher.hpp"
+#include "TeacherPlugin.hpp"
 
 namespace microbe {
     void Teacher::setGoal(const double value)

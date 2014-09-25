@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-#include "MultiLayerPerceptron.h"
+#include "MultiLayerPerceptron.hpp"
 
 namespace microbe {
     void MultiLayerPerceptron::run(void)

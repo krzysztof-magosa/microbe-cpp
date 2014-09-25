@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-#include "Sigmoid.h"
+#include "Sigmoid.hpp"
 #include <math.h>
 
 namespace microbe {

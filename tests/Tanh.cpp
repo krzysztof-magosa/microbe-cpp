@@ -14,7 +14,7 @@
  */
 
 #include "gtest/gtest.h"
-#include "Tanh.h"
+#include "Tanh.hpp"
 
 TEST(Tanh, Limits)
 {

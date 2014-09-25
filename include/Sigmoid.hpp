@@ -13,23 +13,23 @@
  * limitations under the License.
  */
 
-#ifndef __Microbe__SmartLearningRate__
-#define __Microbe__SmartLearningRate__
+#ifndef __Microbe__Sigmoid__
+#define __Microbe__Sigmoid__
 
-#include "TeacherPlugin.h"
+#include "Function.hpp"
 
 namespace microbe {
-    class SmartLearningRate : public TeacherPlugin {
+    class Sigmoid : public Function {
     public:
-    	void init();
-    	void adjustRate(const double ratio);
-    	void preEpoch(void);
-    	void postEpoch(void);
-
-    protected:
-    	bool ready = false;
-    	double lastError;
+        double function(const double input);
+        double derivative(const double functionOutput);
+        double getUpperLimit();
+        double getLowerLimit();
+        bool hasFlatSpot();
+        
+    private:
+        double getSlope();
     };
 }
 
-#endif /* defined(__Microbe__SmartLearningRate__) */
+#endif /* defined(__Microbe__Sigmoid__) */

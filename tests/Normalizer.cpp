@@ -14,7 +14,7 @@
  */
 
 #include "gtest/gtest.h"
-#include "Normalizer.h"
+#include "Normalizer.hpp"
 
 TEST(NormalizerTest, Normalize)
 {

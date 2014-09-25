@@ -17,8 +17,8 @@
 #define __Microbe__Teacher__
 
 #include <cmath>
-#include "LearningSet.h"
-#include "Network.h"
+#include "LearningSet.hpp"
+#include "Network.hpp"
 
 namespace microbe {
     class TeacherPlugin;

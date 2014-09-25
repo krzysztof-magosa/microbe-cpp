@@ -13,17 +13,19 @@
  * limitations under the License.
  */
 
-#ifndef __Microbe__InputLayer__
-#define __Microbe__InputLayer__
+#ifndef __Microbe__BiasNeuron__
+#define __Microbe__BiasNeuron__
 
 #include <iostream>
-#include "Layer.h"
+#include "Neuron.hpp"
 
 namespace microbe {
-    class InputLayer : public Layer {
+    class BiasNeuron : public Neuron {
     public:
-        InputLayer(const int neuronsCount);
+        double activate(void);
+        void addInputConnection(Connection& connection);
+        NeuronType getType(void);
     };
 }
 
-#endif /* defined(__Microbe__InputLayer__) */
+#endif /* defined(__Microbe__BiasNeuron__) */

@@ -17,9 +17,9 @@
 #define __Microbe__Neuron__
 
 #include <vector>
-#include "Function.h"
-#include "Connection.h"
-#include "LearningData.h"
+#include "Function.hpp"
+#include "Connection.hpp"
+#include "LearningData.hpp"
 
 namespace microbe {
     class Connection;

@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-#include "Layer.h"
+#include "Layer.hpp"
 
 namespace microbe {
     Layer::Layer()

@@ -13,23 +13,23 @@
  * limitations under the License.
  */
 
-#ifndef __Microbe__Network__
-#define __Microbe__Network__
+#ifndef __Microbe__SmartLearningRate__
+#define __Microbe__SmartLearningRate__
 
-#include <vector>
-#include <map>
-#include "Neuron.h"
-#include "InputNeuron.h"
+#include "TeacherPlugin.hpp"
 
 namespace microbe {
-    class Network {
+    class SmartLearningRate : public TeacherPlugin {
     public:
-        virtual void run(void) = 0;
-        virtual void setValues(std::vector<double> values) = 0;
-        virtual std::vector<double> getOutput(void) = 0;
-        virtual std::map<std::string, Neuron*> getNeuronsMap(void) = 0;
-        virtual std::vector<InputNeuron*> getInputNeurons(void) = 0;
+    	void init();
+    	void adjustRate(const double ratio);
+    	void preEpoch(void);
+    	void postEpoch(void);
+
+    protected:
+    	bool ready = false;
+    	double lastError;
     };
 }
 
-#endif /* defined(__Microbe__Network__) */
+#endif /* defined(__Microbe__SmartLearningRate__) */

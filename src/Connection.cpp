@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-#include "Connection.h"
+#include "Connection.hpp"
 
 namespace microbe {
     Connection::Connection(Neuron& source, Neuron& destination)
