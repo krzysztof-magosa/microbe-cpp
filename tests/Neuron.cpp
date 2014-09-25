@@ -14,9 +14,9 @@
  */
 
 #include "gtest/gtest.h"
-#include "Neuron.hpp"
-#include "Sigmoid.hpp"
-#include "Connection.hpp"
+#include "microbe/Neuron.hpp"
+#include "microbe/Sigmoid.hpp"
+#include "microbe/Connection.hpp"
 
 TEST(NeuronTest, Type)
 {

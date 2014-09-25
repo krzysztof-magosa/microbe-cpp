@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-#include "TeacherPlugin.hpp"
+#include "microbe/TeacherPlugin.hpp"
 
 namespace microbe {
     void TeacherPlugin::setTeacher(Teacher* teacher)

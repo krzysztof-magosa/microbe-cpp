@@ -14,7 +14,7 @@
  */
 
 #include "gtest/gtest.h"
-#include "BiasNeuron.hpp"
+#include "microbe/BiasNeuron.hpp"
 
 TEST(BiasNeuronTest, Type)
 {

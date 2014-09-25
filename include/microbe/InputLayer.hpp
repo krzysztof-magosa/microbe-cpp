@@ -13,23 +13,17 @@
  * limitations under the License.
  */
 
-#ifndef __Microbe__Sigmoid__
-#define __Microbe__Sigmoid__
+#ifndef __Microbe__InputLayer__
+#define __Microbe__InputLayer__
 
-#include "Function.hpp"
+#include <iostream>
+#include "microbe/Layer.hpp"
 
 namespace microbe {
-    class Sigmoid : public Function {
+    class InputLayer : public Layer {
     public:
-        double function(const double input);
-        double derivative(const double functionOutput);
-        double getUpperLimit();
-        double getLowerLimit();
-        bool hasFlatSpot();
-        
-    private:
-        double getSlope();
+        InputLayer(const int neuronsCount);
     };
 }
 
-#endif /* defined(__Microbe__Sigmoid__) */
+#endif /* defined(__Microbe__InputLayer__) */

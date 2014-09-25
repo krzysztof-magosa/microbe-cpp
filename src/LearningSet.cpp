@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-#include "LearningSet.hpp"
+#include "microbe/LearningSet.hpp"
 
 namespace microbe {
     LearningSet::LearningSet(std::vector<double> input, std::vector<double> output)

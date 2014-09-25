@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-#include "Neuron.hpp"
+#include "microbe/Neuron.hpp"
 
 namespace microbe {
     void Neuron::setFunction(Function& function)

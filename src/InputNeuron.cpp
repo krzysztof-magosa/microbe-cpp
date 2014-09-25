@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-#include "InputNeuron.hpp"
+#include "microbe/InputNeuron.hpp"
 
 namespace microbe {
     void InputNeuron::setInput(double input)

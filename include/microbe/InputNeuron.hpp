@@ -13,23 +13,22 @@
  * limitations under the License.
  */
 
-#ifndef __Microbe__SmartLearningRate__
-#define __Microbe__SmartLearningRate__
+#ifndef __Microbe__InputNeuron__
+#define __Microbe__InputNeuron__
 
-#include "TeacherPlugin.hpp"
+#include <iostream>
+#include "microbe/Neuron.hpp"
 
 namespace microbe {
-    class SmartLearningRate : public TeacherPlugin {
+    class InputNeuron : public Neuron {
     public:
-    	void init();
-    	void adjustRate(const double ratio);
-    	void preEpoch(void);
-    	void postEpoch(void);
-
-    protected:
-    	bool ready = false;
-    	double lastError;
+        void setInput(double input);
+        double activate(void);
+        NeuronType getType(void);
+        
+    private:
+        double input;
     };
 }
 
-#endif /* defined(__Microbe__SmartLearningRate__) */
+#endif /* defined(__Microbe__InputNeuron__) */

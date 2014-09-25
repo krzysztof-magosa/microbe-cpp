@@ -13,22 +13,19 @@
  * limitations under the License.
  */
 
-#ifndef __Microbe__InputNeuron__
-#define __Microbe__InputNeuron__
+#ifndef __Microbe__BiasNeuron__
+#define __Microbe__BiasNeuron__
 
 #include <iostream>
-#include "Neuron.hpp"
+#include "microbe/Neuron.hpp"
 
 namespace microbe {
-    class InputNeuron : public Neuron {
+    class BiasNeuron : public Neuron {
     public:
-        void setInput(double input);
         double activate(void);
+        void addInputConnection(Connection& connection);
         NeuronType getType(void);
-        
-    private:
-        double input;
     };
 }
 
-#endif /* defined(__Microbe__InputNeuron__) */
+#endif /* defined(__Microbe__BiasNeuron__) */

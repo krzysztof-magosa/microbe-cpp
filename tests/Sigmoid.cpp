@@ -14,7 +14,7 @@
  */
 
 #include "gtest/gtest.h"
-#include "Sigmoid.hpp"
+#include "microbe/Sigmoid.hpp"
 
 TEST(SigmoidTest, Limits)
 {

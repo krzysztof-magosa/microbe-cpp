@@ -14,7 +14,7 @@
  */
 
 #include "gtest/gtest.h"
-#include "InputNeuron.hpp"
+#include "microbe/InputNeuron.hpp"
 
 TEST(NeuronTest, Type)
 {

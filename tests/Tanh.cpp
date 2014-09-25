@@ -14,7 +14,7 @@
  */
 
 #include "gtest/gtest.h"
-#include "Tanh.hpp"
+#include "microbe/Tanh.hpp"
 
 TEST(Tanh, Limits)
 {

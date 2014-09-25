@@ -13,19 +13,23 @@
  * limitations under the License.
  */
 
-#ifndef __Microbe__BiasNeuron__
-#define __Microbe__BiasNeuron__
+#ifndef __Microbe__Network__
+#define __Microbe__Network__
 
-#include <iostream>
-#include "Neuron.hpp"
+#include <vector>
+#include <map>
+#include "microbe/Neuron.hpp"
+#include "microbe/InputNeuron.hpp"
 
 namespace microbe {
-    class BiasNeuron : public Neuron {
+    class Network {
     public:
-        double activate(void);
-        void addInputConnection(Connection& connection);
-        NeuronType getType(void);
+        virtual void run(void) = 0;
+        virtual void setValues(std::vector<double> values) = 0;
+        virtual std::vector<double> getOutput(void) = 0;
+        virtual std::map<std::string, Neuron*> getNeuronsMap(void) = 0;
+        virtual std::vector<InputNeuron*> getInputNeurons(void) = 0;
     };
 }
 
-#endif /* defined(__Microbe__BiasNeuron__) */
+#endif /* defined(__Microbe__Network__) */

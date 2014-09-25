@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-#include "BiasNeuron.hpp"
+#include "microbe/BiasNeuron.hpp"
 
 namespace microbe {
     double BiasNeuron::activate(void)

@@ -16,9 +16,9 @@
 #ifndef __Microbe__BackPropagation__
 #define __Microbe__BackPropagation__
 
-#include "Teacher.hpp"
-#include "MultiLayerPerceptron.hpp"
-#include "LearningData.hpp"
+#include "microbe/Teacher.hpp"
+#include "microbe/MultiLayerPerceptron.hpp"
+#include "microbe/LearningData.hpp"
 
 namespace microbe {
     class BackPropagation : public Teacher {

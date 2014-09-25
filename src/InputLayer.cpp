@@ -13,8 +13,8 @@
  * limitations under the License.
  */
 
-#include "InputLayer.hpp"
-#include "InputNeuron.hpp"
+#include "microbe/InputLayer.hpp"
+#include "microbe/InputNeuron.hpp"
 
 namespace microbe {
     InputLayer::InputLayer(const int neuronsCount)

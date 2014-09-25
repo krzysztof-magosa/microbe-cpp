@@ -14,7 +14,7 @@
  */
 
 #include "gtest/gtest.h"
-#include "Connection.hpp"
+#include "microbe/Connection.hpp"
 
 TEST(ConnectionTest, Connections)
 {

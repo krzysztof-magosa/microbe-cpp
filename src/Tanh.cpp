@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-#include "Tanh.hpp"
+#include "microbe/Tanh.hpp"
 #include <math.h>
 
 namespace microbe {

@@ -16,14 +16,14 @@
 #include <string>
 #include <cstdio>
 
-#include "Neuron.hpp"
-#include "Sigmoid.hpp"
-#include "InputLayer.hpp"
-#include "Layer.hpp"
-#include "MultiLayerPerceptron.hpp"
-#include "LearningSet.hpp"
-#include "BackPropagation.hpp"
-#include "SmartLearningRate.hpp"
+#include "microbe/Neuron.hpp"
+#include "microbe/Sigmoid.hpp"
+#include "microbe/InputLayer.hpp"
+#include "microbe/Layer.hpp"
+#include "microbe/MultiLayerPerceptron.hpp"
+#include "microbe/LearningSet.hpp"
+#include "microbe/BackPropagation.hpp"
+#include "microbe/SmartLearningRate.hpp"
 
 int main(int argc, char** args)
 {

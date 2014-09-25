@@ -15,7 +15,7 @@
 
 #include <algorithm>
 #include <memory>
-#include "BackPropagation.hpp"
+#include "microbe/BackPropagation.hpp"
 
 namespace microbe {
     BackPropagation::BackPropagation(MultiLayerPerceptron& network)

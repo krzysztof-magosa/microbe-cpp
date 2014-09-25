@@ -13,27 +13,23 @@
  * limitations under the License.
  */
 
-#ifndef __Microbe__Layer__
-#define __Microbe__Layer__
+#ifndef __Microbe__SmartLearningRate__
+#define __Microbe__SmartLearningRate__
 
-#include <iostream>
-#include <vector>
-#include "Neuron.hpp"
-#include "BiasNeuron.hpp"
+#include "microbe/TeacherPlugin.hpp"
 
 namespace microbe {
-    class Layer {
+    class SmartLearningRate : public TeacherPlugin {
     public:
-        Layer(const int neuronsCount, Function& function, const bool withBias);
-        Layer(const int neuronsCount, Function& function) : Layer(neuronsCount, function, true) {};
-        Layer(void);
-        std::vector<Neuron*> getNeurons();
-        void run(void);
-        bool hasBias(void);
-        
+    	void init();
+    	void adjustRate(const double ratio);
+    	void preEpoch(void);
+    	void postEpoch(void);
+
     protected:
-        std::vector<Neuron*> neurons;
+    	bool ready = false;
+    	double lastError;
     };
 }
 
-#endif /* defined(__Microbe__Layer__) */
+#endif /* defined(__Microbe__SmartLearningRate__) */

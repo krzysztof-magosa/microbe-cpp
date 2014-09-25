@@ -14,7 +14,7 @@
  */
 
 #include "gtest/gtest.h"
-#include "Normalizer.hpp"
+#include "microbe/Normalizer.hpp"
 
 TEST(NormalizerTest, Normalize)
 {

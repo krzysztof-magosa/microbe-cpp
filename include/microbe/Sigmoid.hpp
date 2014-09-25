@@ -13,20 +13,23 @@
  * limitations under the License.
  */
 
-#ifndef __Microbe__Tanh__
-#define __Microbe__Tanh__
+#ifndef __Microbe__Sigmoid__
+#define __Microbe__Sigmoid__
 
-#include "Function.hpp"
+#include "microbe/Function.hpp"
 
 namespace microbe {
-    class Tanh : public Function {
+    class Sigmoid : public Function {
     public:
         double function(const double input);
         double derivative(const double functionOutput);
         double getUpperLimit();
         double getLowerLimit();
         bool hasFlatSpot();
+        
+    private:
+        double getSlope();
     };
 }
 
-#endif /* defined(__Microbe__Tanh__) */
+#endif /* defined(__Microbe__Sigmoid__) */

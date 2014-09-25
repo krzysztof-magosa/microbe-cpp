@@ -17,8 +17,8 @@
 #define __Microbe__Connection__
 
 #include <random>
-#include "Neuron.hpp"
-#include "LearningData.hpp"
+#include "microbe/Neuron.hpp"
+#include "microbe/LearningData.hpp"
 
 namespace microbe {
     class Neuron;

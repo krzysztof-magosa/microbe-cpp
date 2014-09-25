@@ -13,23 +13,20 @@
  * limitations under the License.
  */
 
-#ifndef __Microbe__TeacherPlugin__
-#define __Microbe__TeacherPlugin__
+#ifndef __Microbe__Tanh__
+#define __Microbe__Tanh__
 
-#include "Teacher.hpp"
+#include "microbe/Function.hpp"
 
 namespace microbe {
-    class TeacherPlugin {
+    class Tanh : public Function {
     public:
-        virtual ~TeacherPlugin() {};
-        void setTeacher(Teacher* teacher);
-        virtual void init(void) = 0;
-        virtual void preEpoch(void) = 0;
-        virtual void postEpoch(void) = 0;
-
-    protected:
-        Teacher* teacher;
+        double function(const double input);
+        double derivative(const double functionOutput);
+        double getUpperLimit();
+        double getLowerLimit();
+        bool hasFlatSpot();
     };
 }
 
-#endif /* defined(__Microbe__TeacherPlugin__) */
+#endif /* defined(__Microbe__Tanh__) */
