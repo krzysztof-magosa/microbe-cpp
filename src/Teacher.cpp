@@ -56,7 +56,7 @@ namespace microbe {
 
         momentum = value;
     }
-        
+
     void Teacher::addLearningSet(LearningSet& set)
     {
         learningSets.push_back(&set);
@@ -101,10 +101,10 @@ namespace microbe {
     double Teacher::squaredError(LearningSet& set)
     {
         double error = 0.0;
-        
+
         network->setValues(set.getInput());
         network->run();
-        
+
         auto outputs = network->getOutput();
         auto expected = set.getOutput();
 
@@ -134,5 +134,5 @@ namespace microbe {
         for (TeacherPlugin *plugin : plugins) {
             plugin->postEpoch();
         }
-    }    
+    }
 }
