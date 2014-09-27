@@ -18,4 +18,5 @@ add_library (
     BackPropagation.cpp
     SmartLearningRate.cpp
     Normalizer.cpp
+    TeacherStatus.cpp
 )
