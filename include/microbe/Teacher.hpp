@@ -29,6 +29,7 @@ namespace microbe {
         void setLearningRate(const double value);
         double getLearningRate(void);
         void setMomentum(const double value);
+        double getMomentum(void);
         void addLearningSet(LearningSet& set);
         std::vector<LearningSet*> getLearningSets(void);
         double getLastEpochError(void);

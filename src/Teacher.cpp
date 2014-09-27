@@ -57,6 +57,11 @@ namespace microbe {
         momentum = value;
     }
 
+    double Teacher::getMomentum(void)
+    {
+        return momentum;
+    }
+
     void Teacher::addLearningSet(LearningSet& set)
     {
         learningSets.push_back(&set);
