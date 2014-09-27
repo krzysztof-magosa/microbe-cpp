@@ -24,6 +24,7 @@
 #include "microbe/LearningSet.hpp"
 #include "microbe/BackPropagation.hpp"
 #include "microbe/SmartLearningRate.hpp"
+#include "microbe/TeacherStatus.hpp"
 
 int main(int argc, char** args)
 {
@@ -55,6 +56,10 @@ int main(int argc, char** args)
     // Smart learning rate
     microbe::SmartLearningRate smartLearningRate;
     bp.registerPlugin(smartLearningRate);
+
+    // Show status of learning
+    microbe::TeacherStatus teacherStatus;
+    bp.registerPlugin(teacherStatus);
 
     // Train
     bp.train();
