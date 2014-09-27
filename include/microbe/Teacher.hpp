@@ -22,7 +22,7 @@
 
 namespace microbe {
     class TeacherPlugin;
-    
+
     class Teacher {
     public:
         void setGoal(const double value);
@@ -35,13 +35,13 @@ namespace microbe {
         double calculateSquaredErrorEpoch(void);
         bool train(void);
         void registerPlugin(TeacherPlugin& plugin);
-        
+
     protected:
         virtual void trainEpoch(void) = 0;
         double squaredError(LearningSet& set);
         void firePreEpoch(void);
         void firePostEpoch(void);
-        
+
         double goal = 0.01;
         double learningRate = 0.75;
         double momentum = 0.95;
