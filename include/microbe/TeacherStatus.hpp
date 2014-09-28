@@ -24,6 +24,7 @@ namespace microbe {
         void init();
         void preEpoch(void);
         void postEpoch(void);
+        void setDisplayInterval(const int iterations);
 
     protected:
         void printStatus(void);

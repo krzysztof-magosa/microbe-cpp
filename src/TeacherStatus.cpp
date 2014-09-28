@@ -41,4 +41,9 @@ namespace microbe {
         std::cout << "Error:            " << teacher->getLastEpochError() << std::endl;
         std::cout << std::endl;
     }
+
+    void TeacherStatus::setDisplayInterval(const int iterations)
+    {
+        everyN = iterations;
+    }
 }
